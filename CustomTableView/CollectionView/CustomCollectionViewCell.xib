@@ -19,10 +19,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="240" height="165"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acC-DV-S3z">
-                        <rect key="frame" x="20" y="191" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acC-DV-S3z">
+                        <rect key="frame" x="6" y="165" width="171" height="71"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXb-ZN-zYY">
+                        <rect key="frame" x="191" y="212" width="41" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -31,9 +38,10 @@
             <size key="customSize" width="241" height="192"/>
             <connections>
                 <outlet property="imageCellView" destination="wRZ-c5-aUw" id="KSu-rR-4R7"/>
-                <outlet property="labelCellView" destination="acC-DV-S3z" id="SBt-xi-hep"/>
+                <outlet property="labelNameCell" destination="acC-DV-S3z" id="yjQ-31-bqq"/>
+                <outlet property="labelVolumeCell" destination="dXb-ZN-zYY" id="CJA-hf-i6f"/>
             </connections>
-            <point key="canvasLocation" x="172.46376811594203" y="111.16071428571428"/>
+            <point key="canvasLocation" x="169.56521739130437" y="111.16071428571428"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -10,19 +10,23 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomCollectionView" customModule="CustomTableView" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="z8T-dF-WmH" id="92P-dD-aFT"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="KE5-i7-OOv"/>
                 <outlet property="linearCollectionView" destination="z8T-dF-WmH" id="dGP-Tg-Psm"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="389"/>
+            <rect key="frame" x="0.0" y="0.0" width="590" height="270"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="z8T-dF-WmH">
-                    <rect key="frame" x="20" y="103" width="374" height="182"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="z8T-dF-WmH">
+                    <rect key="frame" x="0.0" y="32.5" width="590" height="205"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xdv-E5-3i8">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="205" id="OID-fy-HPE"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xdv-E5-3i8">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -32,10 +36,15 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="z8T-dF-WmH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8Vp-Am-5eh"/>
+                <constraint firstItem="z8T-dF-WmH" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Yim-2A-Sz4"/>
+                <constraint firstItem="z8T-dF-WmH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zXe-wc-BHx"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-117.39130434782609" y="87.388392857142847"/>
+            <point key="canvasLocation" x="18.840579710144929" y="34.151785714285715"/>
         </view>
     </objects>
     <resources>

@@ -17,6 +17,8 @@
 		E36CF4E42630CB91009EF7BC /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CF4E32630CB91009EF7BC /* CustomCollectionView.swift */; };
 		E36CF4E82630CE6D009EF7BC /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CF4E62630CE6D009EF7BC /* CustomCollectionViewCell.swift */; };
 		E36CF4E92630CE6D009EF7BC /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36CF4E72630CE6D009EF7BC /* CustomCollectionViewCell.xib */; };
+		E3CC34A62638503C000DB6AC /* ManagedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC34A52638503C000DB6AC /* ManagedObjects.swift */; };
+		E3CC34AA263851BE000DB6AC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC34A9263851BE000DB6AC /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		E36CF4E32630CB91009EF7BC /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
 		E36CF4E62630CE6D009EF7BC /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		E36CF4E72630CE6D009EF7BC /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		E3CC34A52638503C000DB6AC /* ManagedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjects.swift; sourceTree = "<group>"; };
+		E3CC34A9263851BE000DB6AC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		E360D32E2625D22A00B1240C /* CustomTableView */ = {
 			isa = PBXGroup;
 			children = (
+				E3CC34A42638500B000DB6AC /* Model */,
 				E360D3452625DCC900B1240C /* CollectionView */,
 				E360D3442625DCBB00B1240C /* TableView */,
 				E360D32F2625D22A00B1240C /* AppDelegate.swift */,
@@ -73,6 +78,7 @@
 				E360D3382625D22C00B1240C /* Assets.xcassets */,
 				E360D33A2625D22C00B1240C /* LaunchScreen.storyboard */,
 				E360D33D2625D22C00B1240C /* Info.plist */,
+				E3CC34A9263851BE000DB6AC /* Utils.swift */,
 			);
 			path = CustomTableView;
 			sourceTree = "<group>";
@@ -93,6 +99,14 @@
 				E36CF4E72630CE6D009EF7BC /* CustomCollectionViewCell.xib */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		E3CC34A42638500B000DB6AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3CC34A52638503C000DB6AC /* ManagedObjects.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +184,9 @@
 				E360D3342625D22A00B1240C /* ViewController.swift in Sources */,
 				E36CF4E82630CE6D009EF7BC /* CustomCollectionViewCell.swift in Sources */,
 				E360D3302625D22A00B1240C /* AppDelegate.swift in Sources */,
+				E3CC34AA263851BE000DB6AC /* Utils.swift in Sources */,
 				E360D3322625D22A00B1240C /* SceneDelegate.swift in Sources */,
+				E3CC34A62638503C000DB6AC /* ManagedObjects.swift in Sources */,
 				E36CF4E42630CB91009EF7BC /* CustomCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
