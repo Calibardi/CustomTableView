@@ -7,6 +7,9 @@
 
 import Foundation
 
+let cellID = "CustomCollectionViewCell"
+let collectionID = "CustomCollectionView"
+
 class formatter {
 	
 	let numberFormatter: NumberFormatter
@@ -21,7 +24,7 @@ class formatter {
 		numberFormatter.multiplier = 1.0
 	}
 	
-	static public func stringNumberFrom(_ obj: Any?) -> String {
+	static public func stringFromNumber(_ obj: Any?) -> String {
 		return self.sharedInstance.numberFormatter.string(for: obj) ?? "X"
 	}
 }

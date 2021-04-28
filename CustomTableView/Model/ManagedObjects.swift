@@ -7,16 +7,16 @@
 
 import Foundation
 
-class alcohol {
+class CollectionCellContent {
 	
-	var name: String
+	var title: String
 	var imageLiteral: String
-	var volume: Float
+	var header2: Float
 	
-	init(name: String, imageName: String, volume: Float) {
-		self.name = name
+	init(title: String, imageName: String, header2: Float) {
+		self.title = title
 		self.imageLiteral = imageName
-		self.volume = volume
+		self.header2 = header2
 	}
 	
 }

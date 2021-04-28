@@ -7,9 +7,10 @@
 
 import UIKit
 
+//@IBDesignable
 class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     
-	var managedObjectsArray: [alcohol] = [alcohol]()
+	var managedObjectsArray: [CollectionCellContent] = [CollectionCellContent]()
 	
 	@IBOutlet var contentView: UIView!
 	@IBOutlet weak var collectionView: UICollectionView!
@@ -36,7 +37,7 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
 	
 	private func commonInit() {
 		
-		Bundle.main.loadNibNamed("CustomCollectioView", owner: self, options: nil)
+		Bundle.main.loadNibNamed(collectionID, owner: self, options: nil)
 		addSubview(contentView)
 		contentView.frame = self.bounds
 		contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -45,19 +46,35 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
 		collectionView.delegate = self
 		collectionView.dataSource = self
 		
-		let collectionViewCellNib = UINib(nibName: "CustomCollectionViewCell", bundle: nil)
-		self.collectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: "customCollectionViewCell")
+		initCellNib()
 		
 		debugPrintString("commonInitCalled")
 	}
+    
+    private func initCellNib() {
+        let collectionViewCellNib = UINib(nibName: cellID, bundle: nil)
+        self.collectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: cellID)
+    }
 
     //MARK: - Collection view datasource
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        
+        debugPrintString("[Collection numberOfItemsInSection] \(managedObjectsArray.count)")
+        return managedObjectsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CustomCollectionViewCell
+        
+        cell.managedObject = self.managedObjectsArray[indexPath.item]
+        debugPrintString("[Collection cellForItemAt] -> \(indexPath.item)")
+
+        return cell
     }
     
 }

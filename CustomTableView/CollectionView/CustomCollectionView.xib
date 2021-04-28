@@ -17,17 +17,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="590" height="270"/>
+            <rect key="frame" x="0.0" y="0.0" width="753" height="417"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="z8T-dF-WmH">
-                    <rect key="frame" x="0.0" y="32.5" width="590" height="205"/>
+                    <rect key="frame" x="0.0" y="0.0" width="753" height="417"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="205" id="OID-fy-HPE"/>
-                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xdv-E5-3i8">
-                        <size key="itemSize" width="128" height="128"/>
+                        <size key="itemSize" width="200" height="200"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -37,14 +34,15 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="z8T-dF-WmH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8Vp-Am-5eh"/>
-                <constraint firstItem="z8T-dF-WmH" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Yim-2A-Sz4"/>
-                <constraint firstItem="z8T-dF-WmH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zXe-wc-BHx"/>
+                <constraint firstItem="z8T-dF-WmH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="23h-K6-7uc"/>
+                <constraint firstItem="z8T-dF-WmH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ExG-ze-uoE"/>
+                <constraint firstItem="z8T-dF-WmH" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="GGe-Gl-XIe"/>
+                <constraint firstAttribute="bottom" secondItem="z8T-dF-WmH" secondAttribute="bottom" id="mpC-tu-EcR"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="18.840579710144929" y="34.151785714285715"/>
+            <point key="canvasLocation" x="136.95652173913044" y="83.370535714285708"/>
         </view>
     </objects>
     <resources>
