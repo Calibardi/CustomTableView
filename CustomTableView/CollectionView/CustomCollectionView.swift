@@ -10,6 +10,8 @@ import UIKit
 //@IBDesignable
 class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    static public let collectionID = "CustomCollectionView"
+
 	var managedObjectsArray: [CollectionCellContent] = [CollectionCellContent]()
 	
 	@IBOutlet private var contentView: UIView!
@@ -28,7 +30,7 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
 	
 	private func commonInit() {
 		
-		Bundle.main.loadNibNamed(collectionID, owner: self, options: nil)
+        Bundle.main.loadNibNamed(CustomCollectionView.collectionID, owner: self, options: nil)
 		addSubview(contentView)
 		contentView.frame = self.bounds
 		contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -43,11 +45,11 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
 	}
     
     private func initCellNib() {
-        let collectionViewCellNib = UINib(nibName: cellID, bundle: nil)
-        self.collectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: cellID)
+        let collectionViewCellNib = UINib(nibName: CustomCollectionViewCell.cellID, bundle: nil)
+        self.collectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: CustomCollectionViewCell.cellID)
     }
 
-    //MARK: - Collection view datasource
+    //MARK: - Collection view datasource/delegate
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -60,7 +62,7 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CustomCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.cellID, for: indexPath) as! CustomCollectionViewCell
         
         cell.managedObject = self.managedObjectsArray[indexPath.item]
         debugPrintString("[Collection cellForItemAt] -> \(indexPath.item)")
@@ -68,4 +70,29 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
+            print("\(cell.managedObject?.title ?? "") VOL: \(cell.managedObject?.header2 ?? "")")
+            cell.showSelection()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
+            cell.hideSelection()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
+            cell.layer.shadowColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
+            cell.layer.shadowColor = UIColor.lightGray.cgColor
+
+        }
+    }
 }

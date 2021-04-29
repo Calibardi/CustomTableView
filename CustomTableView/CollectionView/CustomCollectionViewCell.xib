@@ -33,6 +33,10 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seal.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TTr-x5-HmI">
+                        <rect key="frame" x="113" y="132" width="16" height="12"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
@@ -49,10 +53,14 @@
             <size key="customSize" width="226" height="168"/>
             <connections>
                 <outlet property="imageCellView" destination="KQg-b1-94g" id="B1U-CN-FYy"/>
+                <outlet property="imageIfSelected" destination="TTr-x5-HmI" id="zYa-Qc-TCv"/>
                 <outlet property="labelFooterCell" destination="NJF-eX-7ar" id="fst-xq-D8k"/>
                 <outlet property="labelMainTitleCell" destination="acC-DV-S3z" id="ONg-x0-EBp"/>
             </connections>
             <point key="canvasLocation" x="197.82608695652175" y="104.46428571428571"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="seal.fill" catalog="system" width="128" height="128"/>
+    </resources>
 </document>

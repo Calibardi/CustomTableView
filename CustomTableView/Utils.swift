@@ -7,7 +7,6 @@
 
 import Foundation
 
-let cellID = "CustomCollectionViewCell"
 let collectionID = "CustomCollectionView"
 
 class formatter {
