@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qis-a8-eAf" customClass="CustomCollectionView" customModule="CustomTableView" customModuleProvider="target">
-                                <rect key="frame" x="20" y="44" width="374" height="175"/>
+                                <rect key="frame" x="20" y="44" width="374" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>

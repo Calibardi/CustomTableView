@@ -12,18 +12,9 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
     
 	var managedObjectsArray: [CollectionCellContent] = [CollectionCellContent]()
 	
-	@IBOutlet var contentView: UIView!
-	@IBOutlet weak var collectionView: UICollectionView!
-	@IBOutlet weak var linearCollectionView: UICollectionView!
+	@IBOutlet private var contentView: UIView!
+	@IBOutlet weak private var collectionView: UICollectionView!
     
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-	
 	//MARK: - class inits
 	override init(frame: CGRect) {
 		super.init(frame: frame)
