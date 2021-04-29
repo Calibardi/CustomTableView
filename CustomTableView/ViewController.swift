@@ -15,10 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionViewBeers: CustomCollectionView!
     
     let beersArray = [
-        Beer(title: "Non saprei", imageName: "", header2: 12.5),
-        Beer(title: "Peroni", imageName: "", header2: 13.5),
-        Beer(title: "Leffe", imageName: "", header2: 16),
-        Beer(title: "Cazzottino", imageName: "", header2: 11)]
+        Beer(title: "Leffe", imageName: "leffe", header2: 12.5),
+        Beer(title: "Delirium Tremens", imageName: "delirium", header2: 13.5),
+        Beer(title: "Spitfire", imageName: "spitfire", header2: 16),
+        Beer(title: "Lupulus", imageName: "lupulus", header2: 11)]
     
     override func viewDidLoad() {
         super.viewDidLoad()

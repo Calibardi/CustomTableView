@@ -32,3 +32,4 @@ class formatter {
 func debugPrintString(_ string: String) {
 	print("[DEBUG] ~> " + string)
 }
+
