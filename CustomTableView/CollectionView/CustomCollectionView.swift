@@ -13,6 +13,7 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
     static public let collectionID = "CustomCollectionView"
 
 	var managedObjectsArray: [CollectionCellContent] = [CollectionCellContent]()
+    var delegate: TouchInCollectionCell?
 	
 	@IBOutlet private var contentView: UIView!
 	@IBOutlet weak private var collectionView: UICollectionView!
@@ -73,6 +74,7 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
             print("\(cell.managedObject?.title ?? "") VOL: \(cell.managedObject?.header2 ?? "")")
+            delegate?.showAlertAfterTouchInsideCell(managedObject: cell.managedObject ?? managedObjectsArray[indexPath.item])
             cell.showSelection()
         }
     }

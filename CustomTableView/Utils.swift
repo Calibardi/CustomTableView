@@ -29,6 +29,9 @@ class formatter {
 }
 
 func debugPrintString(_ string: String) {
-	print("[DEBUG] ~> " + string)
+	NSLog("[DEBUG] ~> " + string)
 }
-
+// MARK: - Protocollo/delegate
+protocol TouchInCollectionCell {
+    func showAlertAfterTouchInsideCell(managedObject: CollectionCellContent)
+}

@@ -6,8 +6,6 @@
 //
 import UIKit
 
-import UIKit
-
 class CustomCollectionViewCell: UICollectionViewCell {
 	
     static public let cellID = "CustomCollectionViewCell"

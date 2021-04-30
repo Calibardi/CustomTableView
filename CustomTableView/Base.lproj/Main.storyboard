@@ -16,14 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qis-a8-eAf" customClass="CustomCollectionView" customModule="CustomTableView" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qis-a8-eAf" customClass="CustomCollectionView" customModule="CustomTableView" customModuleProvider="target">
                                 <rect key="frame" x="20" y="44" width="374" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="zwJ-tx-COr"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qis-a8-eAf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9Ds-TL-dfM"/>
+                            <constraint firstItem="Qis-a8-eAf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f6E-Xk-9JW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qis-a8-eAf" secondAttribute="trailing" constant="20" id="ijZ-cR-YvJ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionViewBeers" destination="Qis-a8-eAf" id="7JI-Qh-c3t"/>
