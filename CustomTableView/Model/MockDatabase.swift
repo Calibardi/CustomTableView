@@ -7,8 +7,9 @@
 
 import Foundation
 
-class Beer: CollectionCellContent {
-}
+class Beer: CollectionCellContent {}
+
+class Gin: CollectionCellContent {}
 
 let beersArray = [
     Beer(title: "Leffe", imageName: "leffe", header2: "6.5%"),
@@ -16,3 +17,13 @@ let beersArray = [
     Beer(title: "Spitfire", imageName: "spitfire", header2: "6.5%"),
     Beer(title: "Lupulus", imageName: "lupulus", header2: "8.5%")
 ]
+
+let ginArray = [
+	Gin(title: "Gin del professore", imageName: "gindelprof", header2: "43.7%"),
+	Gin(title: "Gin Mare", imageName: "ginmare", header2: "42.7%"),
+	Gin(title: "Tanqueray", imageName: "tanquerai", header2: "43.1%"),
+	Gin(title: "Monkey 47 Sloe", imageName: "monkey47", header2: "29%")
+]
+
+var objectMatrix: [[[CollectionCellContent]]] = [[]]
+	

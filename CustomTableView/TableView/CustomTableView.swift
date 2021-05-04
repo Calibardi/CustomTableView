@@ -9,6 +9,9 @@ import UIKit
 
 class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
         
+	var managedObjectsArray1: [CollectionCellContent] = [CollectionCellContent]()
+	var managedObjectsArray2: [CollectionCellContent] = [CollectionCellContent]()
+	
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var tableViewCustom: UITableView!
     
@@ -44,15 +47,38 @@ class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
     
 //    MARK: - Tableview datasource/delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 1
     }
+	
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return 2
+	}
     
+	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		switch section {
+		case 0:
+			return "Beers"
+		case 1:
+			return "Gin"
+		default:
+			return ""
+		}
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 170
+	}
+	
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        <#code#>
+		let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
+		if indexPath.section == 0 {
+			cell.populateWith(object: managedObjectsArray1)
+		} else {
+			cell.populateWith(object: managedObjectsArray2)
+		}
+		
+		return cell
+		
     }
 }
 

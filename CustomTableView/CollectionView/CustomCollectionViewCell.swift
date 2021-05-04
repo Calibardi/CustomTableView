@@ -55,6 +55,14 @@ class CustomCollectionViewCell: UICollectionViewCell {
         
     }
 
+	override func prepareForReuse() {
+		super.prepareForReuse()
+		
+//		self.imageCellView = nil
+		self.labelMainTitleCell.text?.removeAll()
+		self.labelFooterCell.text?.removeAll()
+	}
+	
     func showSelection(){ imageIfSelected.alpha = 0.5 }
     func hideSelection(){ imageIfSelected.alpha = 0.0 }
     

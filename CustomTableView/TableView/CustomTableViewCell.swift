@@ -9,7 +9,13 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     
-    override func awakeFromNib() {
+	@IBOutlet weak var viewCustomCollection: CustomCollectionView!
+	
+	func populateWith(object: [CollectionCellContent]) {
+		self.viewCustomCollection.managedObjectsArray = object
+	}
+	
+	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

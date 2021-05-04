@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="135" height="103"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acC-DV-S3z">
-                        <rect key="frame" x="1" y="105" width="75" height="20.5"/>
+                        <rect key="frame" x="1" y="105" width="98" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                 <constraint firstAttribute="bottom" secondItem="NJF-eX-7ar" secondAttribute="bottom" constant="31" id="fpK-Se-nBs"/>
                 <constraint firstItem="NJF-eX-7ar" firstAttribute="top" secondItem="KQg-b1-94g" secondAttribute="bottom" constant="-1" id="lAr-ts-qBr"/>
                 <constraint firstItem="KQg-b1-94g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wHm-4I-cs1"/>
-                <constraint firstItem="NJF-eX-7ar" firstAttribute="leading" secondItem="acC-DV-S3z" secondAttribute="trailing" constant="30.5" id="yV8-Dc-e5N"/>
+                <constraint firstItem="NJF-eX-7ar" firstAttribute="leading" secondItem="acC-DV-S3z" secondAttribute="trailing" constant="7.5" id="yV8-Dc-e5N"/>
             </constraints>
             <size key="customSize" width="226" height="168"/>
             <connections>

@@ -11,12 +11,17 @@ import UIKit
 class ViewController: UIViewController, TouchInCollectionCell {
     
     @IBOutlet weak var collectionViewBeers: CustomCollectionView!
-
+	@IBOutlet weak var customTblView: CustomTableView!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+		
         self.collectionViewBeers.managedObjectsArray = beersArray
         self.collectionViewBeers.delegate = self
+		
+		self.customTblView.managedObjectsArray1 = beersArray
+		self.customTblView.managedObjectsArray2 = ginArray
     }
     
     func showAlertAfterTouchInsideCell(managedObject: CollectionCellContent) {

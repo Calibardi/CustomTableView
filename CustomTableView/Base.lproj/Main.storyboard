@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,17 +23,26 @@
                                     <constraint firstAttribute="height" constant="169" id="zwJ-tx-COr"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWJ-jq-unG" customClass="CustomTableView" customModule="CustomTableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="337" width="414" height="525"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qis-a8-eAf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9Ds-TL-dfM"/>
+                            <constraint firstItem="KWJ-jq-unG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bvi-wI-KBf"/>
+                            <constraint firstItem="KWJ-jq-unG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ajL-V6-gcd"/>
+                            <constraint firstItem="KWJ-jq-unG" firstAttribute="top" secondItem="Qis-a8-eAf" secondAttribute="bottom" constant="124" id="f4I-jR-Y9D"/>
                             <constraint firstItem="Qis-a8-eAf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f6E-Xk-9JW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qis-a8-eAf" secondAttribute="trailing" constant="20" id="ijZ-cR-YvJ"/>
+                            <constraint firstItem="KWJ-jq-unG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yaU-AV-bkx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionViewBeers" destination="Qis-a8-eAf" id="7JI-Qh-c3t"/>
+                        <outlet property="customTblView" destination="KWJ-jq-unG" id="8rB-FQ-s1f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
