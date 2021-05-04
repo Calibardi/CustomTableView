@@ -8,9 +8,7 @@
 import UIKit
 
 class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
-    
-    static public let tableViewID = "CustomTableView"
-    
+        
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var tableViewCustom: UITableView!
     
@@ -27,7 +25,7 @@ class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     private func commonInit() {
         
-        Bundle.main.loadNibNamed(CustomTableView.tableViewID, owner: self, options: nil)
+        Bundle.main.loadNibNamed(CustomTableView.identifier, owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -40,8 +38,8 @@ class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     private func cellInit() {
-        let tableViewCellNib = UINib(nibName: CustomTableViewCell.cellTblID, bundle: nil)
-        self.tableViewCustom.register(tableViewCellNib, forCellReuseIdentifier: CustomTableViewCell.cellTblID)
+        let tableViewCellNib = UINib(nibName: CustomTableViewCell.identifier, bundle: nil)
+        self.tableViewCustom.register(tableViewCellNib, forCellReuseIdentifier: CustomTableViewCell.identifier)
     }
     
 //    MARK: - Tableview datasource/delegate
@@ -56,4 +54,10 @@ class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         <#code#>
     }
+}
+
+extension CustomTableView {
+	static var identifier: String {
+		return String(describing: self)
+	}
 }

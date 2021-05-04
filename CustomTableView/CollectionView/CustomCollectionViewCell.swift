@@ -7,9 +7,7 @@
 import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
-	
-    static public let cellID = "CustomCollectionViewCell"
-    
+	    
     var managedObject: CollectionCellContent? {
         didSet {
             
@@ -27,6 +25,8 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var imageCellView: UIImageView!
     @IBOutlet weak private var labelMainTitleCell: UILabel!
     @IBOutlet weak private var labelFooterCell: UILabel!
+	
+
     @IBOutlet weak var imageIfSelected: UIImageView!
     
     override func awakeFromNib() {
@@ -45,7 +45,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 10
         
         //cella
-        
         self.imageIfSelected.tintColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
 
         self.imageCellView.layer.cornerRadius = 10
@@ -59,4 +58,10 @@ class CustomCollectionViewCell: UICollectionViewCell {
     func showSelection(){ imageIfSelected.alpha = 0.5 }
     func hideSelection(){ imageIfSelected.alpha = 0.0 }
     
+}
+
+extension CustomCollectionViewCell {
+	static var identifier: String {
+		return String(describing: self)
+	}
 }

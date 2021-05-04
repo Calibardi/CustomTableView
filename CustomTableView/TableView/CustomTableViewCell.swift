@@ -8,8 +8,6 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-
-    static public let cellTblID = "CustomTableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,5 +19,10 @@ class CustomTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+}
+
+extension CustomTableViewCell {
+	static var identifier: String {
+		return String(describing: self)
+	}
 }

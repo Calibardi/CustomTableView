@@ -10,8 +10,6 @@ import UIKit
 //@IBDesignable
 class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    static public let collectionID = "CustomCollectionView"
-
 	var managedObjectsArray: [CollectionCellContent] = [CollectionCellContent]()
     var delegate: TouchInCollectionCell?
 	
@@ -31,7 +29,7 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
 	
 	private func commonInit() {
 		
-        Bundle.main.loadNibNamed(CustomCollectionView.collectionID, owner: self, options: nil)
+        Bundle.main.loadNibNamed(CustomCollectionView.identifier, owner: self, options: nil)
 		addSubview(contentView)
 		contentView.frame = self.bounds
 		contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -46,8 +44,8 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
 	}
     
     private func initCellNib() {
-        let collectionViewCellNib = UINib(nibName: CustomCollectionViewCell.cellID, bundle: nil)
-        self.collectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: CustomCollectionViewCell.cellID)
+        let collectionViewCellNib = UINib(nibName: CustomCollectionViewCell.identifier, bundle: nil)
+        self.collectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
     }
 
     //MARK: - Collection view datasource/delegate
@@ -63,7 +61,7 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.cellID, for: indexPath) as! CustomCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath) as! CustomCollectionViewCell
         
         cell.managedObject = self.managedObjectsArray[indexPath.item]
         debugPrintString("[Collection cellForItemAt] -> \(indexPath.item)")
@@ -97,4 +95,10 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
 
         }
     }
+}
+
+extension CustomCollectionView {
+	static var identifier: String {
+		return String(describing: self)
+	}
 }
