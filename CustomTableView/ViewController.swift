@@ -24,7 +24,7 @@ class ViewController: UIViewController, TouchInCollectionCell {
 		self.customTblView.managedObjectsArray2 = ginArray
     }
     
-    func showAlertAfterTouchInsideCell(managedObject: CollectionCellContent) {
+    func showAlertAfterTouchInsideCell(managedObject: ManagedObject) {
         let alertController: UIAlertController = UIAlertController(title: "Birra: \(managedObject.title)", message: "Questa birra ha una gradazione alcolica del: \(managedObject.header2)", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")

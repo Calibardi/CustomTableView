@@ -7,9 +7,9 @@
 
 import Foundation
 
-class Beer: CollectionCellContent {}
+class Beer: ManagedObject {}
 
-class Gin: CollectionCellContent {}
+class Gin: ManagedObject {}
 
 let beersArray = [
     Beer(title: "Leffe", imageName: "leffe", header2: "6.5%"),
@@ -25,5 +25,5 @@ let ginArray = [
 	Gin(title: "Monkey 47 Sloe", imageName: "monkey47", header2: "29%")
 ]
 
-var objectMatrix: [[[CollectionCellContent]]] = [[]]
+var objectMatrix: [[[ManagedObject]]] = [[]]
 	

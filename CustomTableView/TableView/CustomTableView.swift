@@ -9,8 +9,8 @@ import UIKit
 
 class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
         
-	var managedObjectsArray1: [CollectionCellContent] = [CollectionCellContent]()
-	var managedObjectsArray2: [CollectionCellContent] = [CollectionCellContent]()
+	var managedObjectsArray1: [ManagedObject] = [ManagedObject]()
+	var managedObjectsArray2: [ManagedObject] = [ManagedObject]()
 	
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var tableViewCustom: UITableView!

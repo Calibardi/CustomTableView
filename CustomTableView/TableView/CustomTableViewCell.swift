@@ -11,7 +11,7 @@ class CustomTableViewCell: UITableViewCell {
     
 	@IBOutlet weak var viewCustomCollection: CustomCollectionView!
 	
-	func populateWith(object: [CollectionCellContent]) {
+	func populateWith(object: [ManagedObject]) {
 		self.viewCustomCollection.managedObjectsArray = object
 	}
 	

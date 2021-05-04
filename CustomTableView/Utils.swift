@@ -33,5 +33,5 @@ func debugPrintString(_ string: String) {
 }
 // MARK: - Protocollo/delegate
 protocol TouchInCollectionCell {
-    func showAlertAfterTouchInsideCell(managedObject: CollectionCellContent)
+    func showAlertAfterTouchInsideCell(managedObject: ManagedObject)
 }

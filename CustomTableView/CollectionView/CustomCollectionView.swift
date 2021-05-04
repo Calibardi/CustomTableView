@@ -10,7 +10,7 @@ import UIKit
 //@IBDesignable
 class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     
-	var managedObjectsArray: [CollectionCellContent] = [CollectionCellContent]()
+	var managedObjectsArray: [ManagedObject] = [ManagedObject]()
     var delegate: TouchInCollectionCell?
 	
 	@IBOutlet private var contentView: UIView!

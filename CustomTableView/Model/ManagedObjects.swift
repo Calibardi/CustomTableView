@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CollectionCellContent {
+class ManagedObject {
 	
 	var title: String
 	var imageLiteral: String

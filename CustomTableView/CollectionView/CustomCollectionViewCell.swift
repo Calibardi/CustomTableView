@@ -8,7 +8,7 @@ import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
 	    
-    var managedObject: CollectionCellContent? {
+    var managedObject: ManagedObject? {
         didSet {
             
             if let image = UIImage(named: managedObject?.imageLiteral ?? ""){
