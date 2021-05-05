@@ -32,6 +32,6 @@ func debugPrintString(_ string: String) {
 	NSLog("[DEBUG] ~> " + string)
 }
 // MARK: - Protocollo/delegate
-protocol TouchInCollectionCell {
+protocol TouchInCollectionCellDelegate {
     func showAlertAfterTouchInsideCell(managedObject: ManagedObject)
 }

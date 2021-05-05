@@ -18,7 +18,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
             }
             
             self.labelMainTitleCell.text    = managedObject?.title
-            self.labelFooterCell.text       = managedObject?.header2
+            self.labelFooterCell.text       = managedObject?.smallText
         }
     }
 	
@@ -58,7 +58,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
 	override func prepareForReuse() {
 		super.prepareForReuse()
 		
-//		self.imageCellView = nil
+		self.imageCellView.image = nil
 		self.labelMainTitleCell.text?.removeAll()
 		self.labelFooterCell.text?.removeAll()
 	}

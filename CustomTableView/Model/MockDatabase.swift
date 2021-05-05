@@ -7,9 +7,11 @@
 
 import Foundation
 
-class Beer: ManagedObject {}
+class Beer: ManagedObject {
+}
 
-class Gin: ManagedObject {}
+class Gin: ManagedObject {	
+}
 
 let beersArray = [
     Beer(title: "Leffe", imageName: "leffe", header2: "6.5%"),
@@ -25,5 +27,16 @@ let ginArray = [
 	Gin(title: "Monkey 47 Sloe", imageName: "monkey47", header2: "29%")
 ]
 
-var objectMatrix: [[[ManagedObject]]] = [[]]
+///Classe da inizializzare e passare alla `CustomTableView`, contiene due array di `ManagedObject`
+struct Container {
 	
+	var firstContent: [ManagedObject]
+	var secondContent: [ManagedObject]
+	
+	///Inizializza `Container` con due array, che verranno rappresentati rispettivamente
+	///nella prima cella della prima sezione della tableView e nella prima cella della seconda sezione della tableView
+	init(firstArray: [ManagedObject], secondArray: [ManagedObject]) {
+		firstContent = firstArray
+		secondContent = secondArray
+	}
+}

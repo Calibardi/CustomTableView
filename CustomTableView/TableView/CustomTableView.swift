@@ -7,13 +7,18 @@
 
 import UIKit
 
+enum sections: Int {
+	case firstContent
+	case secondContent
+}
+///Questa tableView è costruita per gestire due sole celle, il contenuto di queste celle piò essere definito tramite l'inizializzazione di una classe `Container`
+///e riempendola cone due array di oggetti conformi a `ManagedObject`
 class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
-        
-	var managedObjectsArray1: [ManagedObject] = [ManagedObject]()
-	var managedObjectsArray2: [ManagedObject] = [ManagedObject]()
+        	
+	var container: Container?
 	
-    @IBOutlet var contentView: UIView!
-    @IBOutlet weak var tableViewCustom: UITableView!
+    @IBOutlet private var contentView: UIView!
+    @IBOutlet weak private var tableViewCustom: UITableView!
     
     //MARK: - Class Inits
     override init(frame: CGRect) {
@@ -54,27 +59,20 @@ class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
 		return 2
 	}
     
-	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-		switch section {
-		case 0:
-			return "Beers"
-		case 1:
-			return "Gin"
-		default:
-			return ""
-		}
-	}
-	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 170
 	}
 	
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
-		if indexPath.section == 0 {
-			cell.populateWith(object: managedObjectsArray1)
-		} else {
-			cell.populateWith(object: managedObjectsArray2)
+		
+		switch indexPath.section {
+		case sections.firstContent.rawValue:
+			cell.populateWith(object: container?.firstContent ?? [ManagedObject]())
+		case sections.secondContent.rawValue:
+			cell.populateWith(object: container?.secondContent ?? [ManagedObject]())
+		default:
+			return cell
 		}
 		
 		return cell
