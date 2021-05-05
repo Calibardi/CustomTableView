@@ -19,6 +19,7 @@ class ViewController: UIViewController {
 		
 		let container: Container = Container(firstArray: beersArray, secondArray: ginArray)
 		self.customTblView.container = container
+        self.customTblView.delegate = self
 		
 		//inizializzazione della semplice collectionView
         self.collectionViewBeers.managedObjectsArray = beersArray
@@ -34,7 +35,7 @@ extension ViewController: TouchInCollectionCellDelegate {
 	/// - Parameter managedObject: Il contenuto gestito all'interno della cella, da visualizzare
 	
 	func showAlertAfterTouchInsideCell(managedObject: ManagedObject) {
-		let alertController: UIAlertController = UIAlertController(title: "Birra: \(managedObject.title)", message: "Questa birra ha una gradazione alcolica del: \(managedObject.smallText)", preferredStyle: .alert)
+		let alertController: UIAlertController = UIAlertController(title: "\(managedObject.title)", message: "Questo alcolico ha una gradazione del: \(managedObject.smallText)", preferredStyle: .alert)
 		
 		alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
 			NSLog("The \"OK\" alert occured.")
