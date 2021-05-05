@@ -11,12 +11,11 @@ class ManagedObject {
 	
 	var title: String
 	var imageLiteral: String
-	var header2: String
+	var smallText: String
 	
 	init(title: String, imageName: String, header2: String) {
 		self.title = title
 		self.imageLiteral = imageName
-		self.header2 = header2
+		self.smallText = header2
 	}
-	
 }

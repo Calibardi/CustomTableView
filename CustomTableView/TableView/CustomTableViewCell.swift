@@ -15,16 +15,12 @@ class CustomTableViewCell: UITableViewCell {
 		self.viewCustomCollection.managedObjectsArray = object
 	}
 	
-	override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+	#warning("probabilmente inutile")
+	override func prepareForReuse() {
+		super.prepareForReuse()
+		
+		self.viewCustomCollection.managedObjectsArray.removeAll()
+	}
 }
 
 extension CustomTableViewCell {

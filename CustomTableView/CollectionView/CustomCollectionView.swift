@@ -11,7 +11,7 @@ import UIKit
 class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     
 	var managedObjectsArray: [ManagedObject] = [ManagedObject]()
-    var delegate: TouchInCollectionCell?
+    var delegate: TouchInCollectionCellDelegate?
 	
 	@IBOutlet private var contentView: UIView!
 	@IBOutlet weak private var collectionView: UICollectionView!
@@ -71,7 +71,7 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
-            print("\(cell.managedObject?.title ?? "") VOL: \(cell.managedObject?.header2 ?? "")")
+            print("\(cell.managedObject?.title ?? "") VOL: \(cell.managedObject?.smallText ?? "")")
             delegate?.showAlertAfterTouchInsideCell(managedObject: cell.managedObject ?? managedObjectsArray[indexPath.item])
             cell.showSelection()
         }
@@ -92,7 +92,6 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
             cell.layer.shadowColor = UIColor.lightGray.cgColor
-
         }
     }
 }
