@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, TouchInCollectionCell {
+class ViewController: UIViewController, TouchInCollectionCellDelegate {
     
     @IBOutlet weak var collectionViewBeers: CustomCollectionView!
 	@IBOutlet weak var customTblView: CustomTableView!
@@ -22,6 +22,7 @@ class ViewController: UIViewController, TouchInCollectionCell {
 		
 		self.customTblView.managedObjectsArray1 = beersArray
 		self.customTblView.managedObjectsArray2 = ginArray
+        self.customTblView.delegate = self
     }
     
     func showAlertAfterTouchInsideCell(managedObject: ManagedObject) {

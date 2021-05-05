@@ -11,6 +11,8 @@ class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
         
 	var managedObjectsArray1: [ManagedObject] = [ManagedObject]()
 	var managedObjectsArray2: [ManagedObject] = [ManagedObject]()
+    
+    var delegate: TouchInCollectionCellDelegate?
 	
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var tableViewCustom: UITableView!
@@ -71,10 +73,15 @@ class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
 	
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
+        
 		if indexPath.section == 0 {
+            
 			cell.populateWith(object: managedObjectsArray1)
+            cell.viewCustomCollection.delegate = delegate
 		} else {
+            
 			cell.populateWith(object: managedObjectsArray2)
+            cell.viewCustomCollection.delegate = delegate
 		}
 		
 		return cell
