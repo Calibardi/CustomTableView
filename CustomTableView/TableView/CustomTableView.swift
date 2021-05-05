@@ -39,7 +39,7 @@ class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         self.layer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
-        
+		
         tableViewCustom.delegate = self
         tableViewCustom.dataSource = self
         

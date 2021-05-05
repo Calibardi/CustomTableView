@@ -34,6 +34,7 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
 		contentView.frame = self.bounds
 		contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 		self.layer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
+		self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
 		
 		collectionView.delegate = self
 		collectionView.dataSource = self

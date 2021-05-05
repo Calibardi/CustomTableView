@@ -18,14 +18,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKq-TR-Ihh" customClass="CustomCollectionView" customModule="CustomTableView" customModuleProvider="target">
-                        <rect key="frame" x="8" y="0.0" width="365" height="180"/>
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="180"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="ZKq-TR-Ihh" secondAttribute="trailing" constant="7" id="2Nf-SO-E13"/>
+                    <constraint firstAttribute="trailing" secondItem="ZKq-TR-Ihh" secondAttribute="trailing" id="2Nf-SO-E13"/>
                     <constraint firstItem="ZKq-TR-Ihh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="M2M-g7-zDs"/>
-                    <constraint firstItem="ZKq-TR-Ihh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="PNc-wX-YkA"/>
+                    <constraint firstItem="ZKq-TR-Ihh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PNc-wX-YkA"/>
                     <constraint firstAttribute="bottom" secondItem="ZKq-TR-Ihh" secondAttribute="bottom" id="Xqn-DY-FQH"/>
                 </constraints>
             </tableViewCellContentView>
