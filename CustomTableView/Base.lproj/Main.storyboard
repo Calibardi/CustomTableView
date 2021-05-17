@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,32 +18,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qis-a8-eAf" customClass="CustomCollectionView" customModule="CustomTableView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="169"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="230"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="169" id="zwJ-tx-COr"/>
+                                    <constraint firstAttribute="height" constant="230" id="zwJ-tx-COr"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWJ-jq-unG" customClass="CustomTableView" customModule="CustomTableView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="237" width="414" height="525"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="amb-BZ-fxe" customClass="CustomCollection" customModule="CustomTableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="357" width="414" height="274"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sbv-9z-5tN">
+                                    <size key="itemSize" width="135" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="F6V-a6-FCH">
+                                        <rect key="frame" x="0.0" y="62" width="135" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="X78-hn-627">
+                                            <rect key="frame" x="0.0" y="0.0" width="135" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qis-a8-eAf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Ds-TL-dfM"/>
-                            <constraint firstItem="KWJ-jq-unG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bvi-wI-KBf"/>
-                            <constraint firstItem="KWJ-jq-unG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ajL-V6-gcd"/>
-                            <constraint firstItem="KWJ-jq-unG" firstAttribute="top" secondItem="Qis-a8-eAf" secondAttribute="bottom" constant="24" id="f4I-jR-Y9D"/>
+                            <constraint firstItem="amb-BZ-fxe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HBb-Ug-3TZ"/>
+                            <constraint firstItem="amb-BZ-fxe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kqg-Qu-HFn"/>
+                            <constraint firstItem="amb-BZ-fxe" firstAttribute="top" secondItem="Qis-a8-eAf" secondAttribute="bottom" constant="83" id="LOC-En-xPh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="amb-BZ-fxe" secondAttribute="bottom" constant="231" id="QX3-xa-2da"/>
                             <constraint firstItem="Qis-a8-eAf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f6E-Xk-9JW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qis-a8-eAf" secondAttribute="trailing" id="ijZ-cR-YvJ"/>
-                            <constraint firstItem="KWJ-jq-unG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-100" id="yaU-AV-bkx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionViewBeers" destination="Qis-a8-eAf" id="7JI-Qh-c3t"/>
-                        <outlet property="customTblView" destination="KWJ-jq-unG" id="8rB-FQ-s1f"/>
+                        <outlet property="customCollection" destination="amb-BZ-fxe" id="XJ4-g0-yjX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

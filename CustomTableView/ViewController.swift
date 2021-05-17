@@ -11,19 +11,26 @@ import UIKit
 class ViewController: UIViewController {
         
     @IBOutlet weak var collectionViewBeers: CustomCollectionView!
-	@IBOutlet weak var customTblView: CustomTableView!
+//	@IBOutlet weak var customTblView: CustomTableView!
+	@IBOutlet weak var customCollection: CustomCollection!
+	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 		
-		let container: Container = Container(firstArray: beersArray, secondArray: ginArray)
-		self.customTblView.container = container
-        self.customTblView.delegate = self
+//		let container: Container = Container(firstArray: beersArray, secondArray: ginArray)
+//		self.customTblView.container = container
+//        self.customTblView.delegate = self
 		
 		//inizializzazione della semplice collectionView
         self.collectionViewBeers.managedObjectsArray = beersArray
         self.collectionViewBeers.delegate = self
+		
+		//inizializzazione della collection senza view di base
+		self.customCollection.managedObjectsArray = beersArray
+		self.customCollection.alertDelegate = self
+		self.customCollection.bounds = self.view.bounds
     }
 }
 
