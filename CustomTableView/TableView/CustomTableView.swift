@@ -69,15 +69,16 @@ class CustomTableView: UIView, UITableViewDelegate, UITableViewDataSource {
 
 		
 		switch indexPath.section {
+		
 		case sections.firstContent.rawValue:
         
 			cell.populateWith(object: container?.firstContent ?? [ManagedObject]())
-        cell.viewCustomCollection.delegate = delegate
+			cell.viewCustomCollection.delegate = delegate
         
 		case sections.secondContent.rawValue:
         
 			cell.populateWith(object: container?.secondContent ?? [ManagedObject]())
-        cell.viewCustomCollection.delegate = delegate
+			cell.viewCustomCollection.delegate = delegate
 
 		default:
 			return cell

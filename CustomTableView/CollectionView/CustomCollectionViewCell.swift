@@ -59,8 +59,8 @@ class CustomCollectionViewCell: UICollectionViewCell {
 		super.prepareForReuse()
 		
 		self.imageCellView.image = nil
-		self.labelMainTitleCell.text?.removeAll()
-		self.labelFooterCell.text?.removeAll()
+		self.labelMainTitleCell.text = ""
+		self.labelFooterCell.text = ""
 	}
 	
     func showSelection(){ imageIfSelected.alpha = 0.5 }

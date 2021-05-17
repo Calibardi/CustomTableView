@@ -62,12 +62,16 @@ class CustomCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath) as! CustomCollectionViewCell
         
-        cell.managedObject = self.managedObjectsArray[indexPath.item]
-        debugPrintString("[Collection cellForItemAt] -> \(indexPath.item)")
+		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath) as? CustomCollectionViewCell else {
+			return UICollectionViewCell()
+		}
+		
+		cell.managedObject = self.managedObjectsArray[indexPath.item]
+		debugPrintString("[Collection cellForItemAt] -> \(indexPath.item)")
 
-        return cell
+		return cell
+		
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
