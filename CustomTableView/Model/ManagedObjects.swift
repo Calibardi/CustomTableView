@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ManagedObject {
 	
@@ -17,5 +18,16 @@ class ManagedObject {
 		self.title = title
 		self.imageLiteral = imageName
 		self.smallText = header2
+	}
+}
+
+class ManagedColor {
+	
+	var name: String
+	var color: UIColor
+	
+	init(name: String, color: UIColor = .lightGray) {
+		self.name = name
+		self.color = color
 	}
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
         
-    @IBOutlet weak var collectionViewBeers: CustomCollectionView!
+//    @IBOutlet weak var collectionViewBeers: CustomCollectionView!
 //	@IBOutlet weak var customTblView: CustomTableView!
 	@IBOutlet weak var customCollection: CustomCollection!
 	
@@ -24,11 +24,11 @@ class ViewController: UIViewController {
 //        self.customTblView.delegate = self
 		
 		//inizializzazione della semplice collectionView
-        self.collectionViewBeers.managedObjectsArray = beersArray
-        self.collectionViewBeers.delegate = self
+//        self.collectionViewBeers.managedObjectsArray = beersArray
+//        self.collectionViewBeers.delegate = self
 		
 		//inizializzazione della collection senza view di base
-		self.customCollection.managedObjectsArray = beersArray
+		self.customCollection.managedObjectsArray = colorsArray
 		self.customCollection.alertDelegate = self
 		self.customCollection.bounds = self.view.bounds
     }
@@ -36,6 +36,18 @@ class ViewController: UIViewController {
 
 
 extension ViewController: TouchInCollectionCellDelegate {
+
+	func showAlertAfterTouchInsideCell(managedColor: ManagedColor) {
+		let alertController: UIAlertController = UIAlertController(title: "\(managedColor.name)", message: "Colore", preferredStyle: .alert)
+		
+		alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+			NSLog("The \"OK\" alert occured.")
+		}))
+		
+		self.present(alertController, animated: true, completion: nil)
+	}
+	
+	
 	
 	/// Questa funzione gestisce l'alert che viene mostrato quando premiamo all'interno di una cella della `collectionView`.
 	/// - Warning: il delegate associato è chiamato `TouchInCollectionCellDelegate` .

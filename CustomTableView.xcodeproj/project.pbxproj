@@ -13,8 +13,6 @@
 		E360D3372625D22A00B1240C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E360D3352625D22A00B1240C /* Main.storyboard */; };
 		E360D3392625D22C00B1240C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E360D3382625D22C00B1240C /* Assets.xcassets */; };
 		E360D33C2625D22C00B1240C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E360D33A2625D22C00B1240C /* LaunchScreen.storyboard */; };
-		E36CF4E12630C96D009EF7BC /* CustomCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36CF4E02630C96D009EF7BC /* CustomCollectionView.xib */; };
-		E36CF4E42630CB91009EF7BC /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CF4E32630CB91009EF7BC /* CustomCollectionView.swift */; };
 		E36CF4E82630CE6D009EF7BC /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CF4E62630CE6D009EF7BC /* CustomCollectionViewCell.swift */; };
 		E36CF4E92630CE6D009EF7BC /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36CF4E72630CE6D009EF7BC /* CustomCollectionViewCell.xib */; };
 		E372B3B126513B3C004C5D7A /* CustomCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E372B3B026513B3C004C5D7A /* CustomCollection.swift */; };
@@ -22,10 +20,6 @@
 		E3C4729F263AF093000BBCBE /* MockDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C4729E263AF093000BBCBE /* MockDatabase.swift */; };
 		E3CC34A62638503C000DB6AC /* ManagedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC34A52638503C000DB6AC /* ManagedObjects.swift */; };
 		E3CC34AA263851BE000DB6AC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC34A9263851BE000DB6AC /* Utils.swift */; };
-		E3E1E78C263C12EB00ABE669 /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1E78B263C12EB00ABE669 /* CustomTableView.swift */; };
-		E3E1E790263C12FE00ABE669 /* CustomTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E1E78F263C12FE00ABE669 /* CustomTableView.xib */; };
-		E3E1E795263C167500ABE669 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1E793263C167500ABE669 /* CustomTableViewCell.swift */; };
-		E3E1E796263C167500ABE669 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E1E794263C167500ABE669 /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,14 +181,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3E1E790263C12FE00ABE669 /* CustomTableView.xib in Resources */,
 				E360D33C2625D22C00B1240C /* LaunchScreen.storyboard in Resources */,
 				E360D3392625D22C00B1240C /* Assets.xcassets in Resources */,
-				E3E1E796263C167500ABE669 /* CustomTableViewCell.xib in Resources */,
 				E372B3BD265177E4004C5D7A /* CustomCollection.xib in Resources */,
 				E360D3372625D22A00B1240C /* Main.storyboard in Resources */,
 				E36CF4E92630CE6D009EF7BC /* CustomCollectionViewCell.xib in Resources */,
-				E36CF4E12630C96D009EF7BC /* CustomCollectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,13 +201,10 @@
 				E360D3302625D22A00B1240C /* AppDelegate.swift in Sources */,
 				E3CC34AA263851BE000DB6AC /* Utils.swift in Sources */,
 				E3C4729F263AF093000BBCBE /* MockDatabase.swift in Sources */,
-				E3E1E795263C167500ABE669 /* CustomTableViewCell.swift in Sources */,
 				E360D3302625D22A00B1240C /* AppDelegate.swift in Sources */,
-				E3E1E78C263C12EB00ABE669 /* CustomTableView.swift in Sources */,
 				E372B3B126513B3C004C5D7A /* CustomCollection.swift in Sources */,
 				E360D3322625D22A00B1240C /* SceneDelegate.swift in Sources */,
 				E3CC34A62638503C000DB6AC /* ManagedObjects.swift in Sources */,
-				E36CF4E42630CB91009EF7BC /* CustomCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

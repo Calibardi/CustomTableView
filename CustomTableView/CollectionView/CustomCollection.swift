@@ -9,7 +9,7 @@ import UIKit
 
 class CustomCollection: UICollectionView {
 	
-	var managedObjectsArray: [ManagedObject] = [ManagedObject]()
+	var managedObjectsArray: [ManagedColor] = [ManagedColor]()
 	var alertDelegate: TouchInCollectionCellDelegate?
 
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
@@ -55,7 +55,7 @@ extension CustomCollection: UICollectionViewDelegate, UICollectionViewDataSource
 			return UICollectionViewCell()
 		}
 		
-		cell.managedObject = self.managedObjectsArray[indexPath.item]
+		cell.fillCell(with: self.managedObjectsArray[indexPath.item])
 		debugPrintString("[Collection cellForItemAt] -> \(indexPath.item)")
 
 		return cell
@@ -63,8 +63,7 @@ extension CustomCollection: UICollectionViewDelegate, UICollectionViewDataSource
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
-			print("\(cell.managedObject?.title ?? "") VOL: \(cell.managedObject?.smallText ?? "")")
-			alertDelegate?.showAlertAfterTouchInsideCell(managedObject: cell.managedObject ?? managedObjectsArray[indexPath.item])
+			alertDelegate?.showAlertAfterTouchInsideCell(managedColor: managedObjectsArray[indexPath.item])
 			cell.showSelection()
 		}
 	}

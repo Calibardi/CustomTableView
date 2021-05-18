@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Beer: ManagedObject {
 }
@@ -40,3 +41,17 @@ struct Container {
 		secondContent = secondArray
 	}
 }
+
+let verde = UIColor(red: 36/255, green: 212/255, blue: 134/255, alpha: 83/100)
+let blu = UIColor(red: 106/255, green: 156/255, blue: 245/255, alpha: 96/100)
+let fluo = UIColor(red: 180/255, green: 235/255, blue: 52/255, alpha: 92/100)
+let cachi = UIColor(red: 212/255, green: 157/255, blue: 36/255, alpha: 83/100)
+let rosso = UIColor(red: 247/255, green: 73/255, blue: 42/255, alpha: 97/100)
+
+let colorsArray: [ManagedColor] = [
+	ManagedColor(name: "Verde", color: verde),
+	ManagedColor(name: "Blu", color: blu),
+	ManagedColor(name: "Fluo", color: fluo),
+	ManagedColor(name: "Cachi", color: cachi),
+	ManagedColor(name: "Rosso", color: rosso)
+]

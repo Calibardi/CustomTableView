@@ -8,25 +8,8 @@ import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
 	    
-    var managedObject: ManagedObject? {
-        didSet {
-            
-            if let image = UIImage(named: managedObject?.imageLiteral ?? ""){
-                self.imageCellView.image = image
-            } else {
-                self.imageCellView.image = UIImage(named: "placeholder")
-            }
-            
-            self.labelMainTitleCell.text    = managedObject?.title
-            self.labelFooterCell.text       = managedObject?.smallText
-        }
-    }
-	
     @IBOutlet weak private var imageCellView: UIImageView!
     @IBOutlet weak private var labelMainTitleCell: UILabel!
-    @IBOutlet weak private var labelFooterCell: UILabel!
-	
-
     @IBOutlet weak var imageIfSelected: UIImageView!
     
     override func awakeFromNib() {
@@ -35,7 +18,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
         //shadow
         layer.shadowColor = UIColor.lightGray.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 2.0)
-        layer.shadowRadius = 5.0
+        layer.shadowRadius = 3.0
         layer.shadowOpacity = 1.0
         layer.masksToBounds = false
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
@@ -60,16 +43,33 @@ class CustomCollectionViewCell: UICollectionViewCell {
 		
 		self.imageCellView.image = nil
 		self.labelMainTitleCell.text = ""
-		self.labelFooterCell.text = ""
+		self.hideSelection()
 	}
 	
     func showSelection(){ imageIfSelected.alpha = 0.5 }
     func hideSelection(){ imageIfSelected.alpha = 0.0 }
     
+	func fillCell(with object: ManagedColor) {
+		
+		self.imageCellView.fill(with: object.color)
+		self.labelMainTitleCell.text = object.name
+		
+	}
 }
 
 extension CustomCollectionViewCell {
 	static var identifier: String {
 		return String(describing: self)
+	}
+}
+
+extension UIImageView {
+	func fill(with color: UIColor = .lightGray) {
+		let size = self.bounds.size
+		let image = UIGraphicsImageRenderer(size: size).image { rendererContext in
+			color.setFill()
+			rendererContext.fill(CGRect(origin: .zero, size: size))
+		}
+		self.image = image
 	}
 }
