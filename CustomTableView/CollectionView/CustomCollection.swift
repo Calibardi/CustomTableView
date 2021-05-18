@@ -56,27 +56,26 @@ extension CustomCollection: UICollectionViewDelegate, UICollectionViewDataSource
 		}
 		
 		cell.fillCell(with: self.managedObjectsArray[indexPath.item])
+		cell.delegate = alertDelegate
+		
 		debugPrintString("[Collection cellForItemAt] -> \(indexPath.item)")
 
 		return cell
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
-			alertDelegate?.showAlertAfterTouchInsideCell(managedColor: managedObjectsArray[indexPath.item])
-			cell.showSelection()
-		}
+
+		
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-		if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
-			cell.hideSelection()
-		}
+	
+		
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
 		if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
-			cell.layer.shadowColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+			cell.layer.shadowColor = #colorLiteral(red: 0.3940224051, green: 0.3368074298, blue: 0.9009161592, alpha: 1)
 		}
 	}
 	

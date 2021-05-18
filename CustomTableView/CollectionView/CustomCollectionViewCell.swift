@@ -8,9 +8,13 @@ import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
 	    
+	var managedColor: ManagedColor?
+	
     @IBOutlet weak private var imageCellView: UIImageView!
     @IBOutlet weak private var labelMainTitleCell: UILabel!
-    @IBOutlet weak var imageIfSelected: UIImageView!
+	@IBOutlet weak private var buttonAlert: UIButton!
+	
+	var delegate: TouchInCollectionCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,14 +31,12 @@ class CustomCollectionViewCell: UICollectionViewCell {
         contentView.layer.masksToBounds = true
         layer.cornerRadius = 10
         
-        //cella
-        self.imageIfSelected.tintColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
-
         self.imageCellView.layer.cornerRadius = 10
         self.imageCellView.layer.borderWidth = 1
         self.imageCellView.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
-        self.hideSelection()
+		self.buttonAlert.tintColor = .red
+//        self.hideSelection()
         
     }
 
@@ -43,18 +45,24 @@ class CustomCollectionViewCell: UICollectionViewCell {
 		
 		self.imageCellView.image = nil
 		self.labelMainTitleCell.text = ""
-		self.hideSelection()
+//		self.hideSelection()
 	}
     
 	func fillCell(with object: ManagedColor) {
 		
 		self.imageCellView.fill(with: object.color)
 		self.labelMainTitleCell.text = object.name
-		
+		self.managedColor = object
 	}
 	
-	func showSelection(){ imageIfSelected.alpha = 0.5 }
-	func hideSelection(){ imageIfSelected.alpha = 0.0 }
+	@IBAction func showAlert(_ sender: Any) {
+		if let bt = sender as? UIButton {
+			delegate?.showAlertAfterTouchInsideCell(managedColor: managedColor ?? ManagedColor(name: "NULL"))
+		}
+	}
+	
+//	func showSelection(){ imageIfSelected.alpha = 0.5 }
+//	func hideSelection(){ imageIfSelected.alpha = 0.0 }
 }
 
 extension CustomCollectionViewCell {

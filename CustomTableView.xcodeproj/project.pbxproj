@@ -85,10 +85,10 @@
 				E360D3312625D22A00B1240C /* SceneDelegate.swift */,
 				E360D3332625D22A00B1240C /* ViewController.swift */,
 				E360D3352625D22A00B1240C /* Main.storyboard */,
+				E3CC34A9263851BE000DB6AC /* Utils.swift */,
 				E360D3382625D22C00B1240C /* Assets.xcassets */,
 				E360D33A2625D22C00B1240C /* LaunchScreen.storyboard */,
 				E360D33D2625D22C00B1240C /* Info.plist */,
-				E3CC34A9263851BE000DB6AC /* Utils.swift */,
 			);
 			path = CustomTableView;
 			sourceTree = "<group>";

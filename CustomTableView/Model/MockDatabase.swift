@@ -42,7 +42,7 @@ let colorsArray2: [ManagedColor] = [
 	ManagedColor(name: "Giallo chiaro", color: gialloC),
 	ManagedColor(name: "Rosso chiaro", color: rossoC),
 	ManagedColor(name: "Violetto", color: violetto),
-	ManagedColor(name: "Acquamarina", color: acquamarina),
+	ManagedColor(name: "Acqua marina", color: acquamarina),
 	ManagedColor(name: "Verde chiaro", color: verdeC)
 ]
 

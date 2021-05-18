@@ -16,43 +16,44 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KQg-b1-94g">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acC-DV-S3z">
-                        <rect key="frame" x="2" y="59" width="42.5" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acC-DV-S3z">
+                        <rect key="frame" x="4" y="65" width="49" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seal.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TTr-x5-HmI">
-                        <rect key="frame" x="76.5" y="62" width="21.5" height="12"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="10.5" id="qmx-xh-3pC"/>
-                        </constraints>
-                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3or-4K-HFN">
+                        <rect key="frame" x="74" y="65" width="21" height="22"/>
+                        <state key="normal" image="swift" catalog="system"/>
+                        <connections>
+                            <action selector="showAlert:" destination="gTV-IL-0wX" eventType="touchUpInside" id="aIB-ZK-f34"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="TTr-x5-HmI" firstAttribute="top" secondItem="KQg-b1-94g" secondAttribute="bottom" constant="7" id="8wl-wC-SUX"/>
-                <constraint firstItem="KQg-b1-94g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FGr-ym-nRa"/>
-                <constraint firstItem="TTr-x5-HmI" firstAttribute="leading" secondItem="acC-DV-S3z" secondAttribute="trailing" constant="32" id="Txv-kc-QS5"/>
-                <constraint firstAttribute="bottom" secondItem="TTr-x5-HmI" secondAttribute="bottom" constant="26.5" id="kfh-EJ-HdI"/>
-                <constraint firstItem="KQg-b1-94g" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lTc-tk-1Pb"/>
-                <constraint firstItem="acC-DV-S3z" firstAttribute="top" secondItem="KQg-b1-94g" secondAttribute="bottom" constant="3" id="lv5-Ba-7v4"/>
-                <constraint firstItem="acC-DV-S3z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="ocP-G5-24g"/>
-                <constraint firstAttribute="trailing" secondItem="TTr-x5-HmI" secondAttribute="trailing" constant="2" id="sVw-6j-xyF"/>
-                <constraint firstAttribute="trailing" secondItem="KQg-b1-94g" secondAttribute="trailing" id="zR5-7v-26b"/>
+                <constraint firstItem="3or-4K-HFN" firstAttribute="leading" secondItem="acC-DV-S3z" secondAttribute="trailing" constant="21" id="ICM-bQ-noh"/>
+                <constraint firstItem="acC-DV-S3z" firstAttribute="top" secondItem="KQg-b1-94g" secondAttribute="bottom" constant="5" id="V4z-LG-6x9"/>
+                <constraint firstAttribute="trailing" secondItem="KQg-b1-94g" secondAttribute="trailing" id="Xtl-ep-FFC"/>
+                <constraint firstItem="KQg-b1-94g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kuQ-TL-a4N"/>
+                <constraint firstAttribute="trailing" secondItem="3or-4K-HFN" secondAttribute="trailing" constant="5" id="p9Z-gE-UOX"/>
+                <constraint firstAttribute="bottom" secondItem="3or-4K-HFN" secondAttribute="bottom" constant="13" id="rYD-2m-fHW"/>
+                <constraint firstItem="KQg-b1-94g" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sz7-Xq-Z2G"/>
+                <constraint firstItem="acC-DV-S3z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="vk2-Wo-Gcz"/>
+                <constraint firstItem="3or-4K-HFN" firstAttribute="top" secondItem="KQg-b1-94g" secondAttribute="bottom" constant="5" id="xJ9-82-0FO"/>
             </constraints>
             <size key="customSize" width="215" height="126"/>
             <connections>
+                <outlet property="buttonAlert" destination="3or-4K-HFN" id="qoD-nE-gdK"/>
                 <outlet property="imageCellView" destination="KQg-b1-94g" id="B1U-CN-FYy"/>
-                <outlet property="imageIfSelected" destination="TTr-x5-HmI" id="zYa-Qc-TCv"/>
                 <outlet property="labelMainTitleCell" destination="acC-DV-S3z" id="ONg-x0-EBp"/>
             </connections>
             <point key="canvasLocation" x="168.11594202898553" y="90.401785714285708"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="seal.fill" catalog="system" width="128" height="128"/>
+        <image name="swift" catalog="system" width="128" height="106"/>
     </resources>
 </document>
