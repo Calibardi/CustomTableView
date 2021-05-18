@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//MARK: - Not in use
 class ManagedObject {
 	
 	var title: String
@@ -21,6 +22,7 @@ class ManagedObject {
 	}
 }
 
+//MARK: - In use
 class ManagedColor {
 	
 	var name: String

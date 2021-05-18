@@ -9,17 +9,16 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     
-	@IBOutlet weak var viewCustomCollection: CustomCollectionView!
+	@IBOutlet weak var customCollection: CustomCollection!
 	
-	func populateWith(object: [ManagedObject]) {
-		self.viewCustomCollection.managedObjectsArray = object
+	func populateWith(object: [ManagedColor]) {
+		self.customCollection.managedObjectsArray = object
 	}
 	
-	#warning("probabilmente inutile")
 	override func prepareForReuse() {
 		super.prepareForReuse()
 		
-		self.viewCustomCollection.managedObjectsArray.removeAll()
+		self.customCollection.managedObjectsArray.removeAll()
 	}
 }
 

@@ -45,9 +45,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
 		self.labelMainTitleCell.text = ""
 		self.hideSelection()
 	}
-	
-    func showSelection(){ imageIfSelected.alpha = 0.5 }
-    func hideSelection(){ imageIfSelected.alpha = 0.0 }
     
 	func fillCell(with object: ManagedColor) {
 		
@@ -55,6 +52,9 @@ class CustomCollectionViewCell: UICollectionViewCell {
 		self.labelMainTitleCell.text = object.name
 		
 	}
+	
+	func showSelection(){ imageIfSelected.alpha = 0.5 }
+	func hideSelection(){ imageIfSelected.alpha = 0.0 }
 }
 
 extension CustomCollectionViewCell {

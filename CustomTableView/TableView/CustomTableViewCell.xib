@@ -10,30 +10,36 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="CustomTableView" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="380" height="180"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="105" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="CustomTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="105"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="380" height="180"/>
+                <rect key="frame" x="0.0" y="0.0" width="366" height="105"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKq-TR-Ihh" customClass="CustomCollectionView" customModule="CustomTableView" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="380" height="180"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Rwh-R0-Gih" customClass="CustomCollection" customModule="CustomTableView">
+                        <rect key="frame" x="0.0" y="0.0" width="366" height="105"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kQN-wn-hiD">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="ZKq-TR-Ihh" secondAttribute="trailing" id="2Nf-SO-E13"/>
-                    <constraint firstItem="ZKq-TR-Ihh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="M2M-g7-zDs"/>
-                    <constraint firstItem="ZKq-TR-Ihh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PNc-wX-YkA"/>
-                    <constraint firstAttribute="bottom" secondItem="ZKq-TR-Ihh" secondAttribute="bottom" id="Xqn-DY-FQH"/>
+                    <constraint firstItem="Rwh-R0-Gih" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CGA-RE-SJC"/>
+                    <constraint firstItem="Rwh-R0-Gih" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="d6m-1N-GbZ"/>
+                    <constraint firstAttribute="trailing" secondItem="Rwh-R0-Gih" secondAttribute="trailing" id="itZ-DF-kpi"/>
+                    <constraint firstAttribute="bottom" secondItem="Rwh-R0-Gih" secondAttribute="bottom" id="yjv-Rh-Uzg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="viewCustomCollection" destination="ZKq-TR-Ihh" id="YzC-kq-kX5"/>
+                <outlet property="customCollection" destination="Rwh-R0-Gih" id="VF9-9d-aPw"/>
             </connections>
-            <point key="canvasLocation" x="44.927536231884062" y="52.901785714285715"/>
+            <point key="canvasLocation" x="34.782608695652179" y="37.834821428571423"/>
         </tableViewCell>
     </objects>
     <resources>
