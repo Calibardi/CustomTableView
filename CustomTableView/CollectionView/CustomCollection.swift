@@ -73,6 +73,7 @@ extension CustomCollection: UICollectionViewDelegate, UICollectionViewDataSource
 		if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
 			cell.hideSelection()
 		}
+		alertDelegate?.userDidTapInCellToIncreaseProgress()
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
@@ -85,8 +86,7 @@ extension CustomCollection: UICollectionViewDelegate, UICollectionViewDataSource
 		if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
 			cell.layer.shadowColor = UIColor.black.cgColor
 		}
-	}
-	
+	}	
 }
 
 //MARK: - Class identifier

@@ -34,4 +34,6 @@ func debugPrintString(_ string: String) {
 // MARK: - Protocollo/delegate
 protocol TouchInCollectionCellDelegate {
 	func showAlertAfterTouchOnButton(managedColor: ManagedColor)
+	func progressViewBecameSaturated()
+	func userDidTapInCellToIncreaseProgress()
 }
