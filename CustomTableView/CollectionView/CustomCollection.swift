@@ -64,13 +64,15 @@ extension CustomCollection: UICollectionViewDelegate, UICollectionViewDataSource
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
-		
+		if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
+			cell.showSelection()
+		}
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-	
-		
+		if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
+			cell.hideSelection()
+		}
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
@@ -81,7 +83,7 @@ extension CustomCollection: UICollectionViewDelegate, UICollectionViewDataSource
 	
 	func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
 		if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
-			cell.layer.shadowColor = UIColor.lightGray.cgColor
+			cell.layer.shadowColor = UIColor.black.cgColor
 		}
 	}
 	

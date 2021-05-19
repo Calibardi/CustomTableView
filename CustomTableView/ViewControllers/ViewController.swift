@@ -9,31 +9,31 @@ import UIKit
 
 
 class ViewController: UIViewController {
-        
-	@IBOutlet weak var customCollection: CustomCollection!
+	
+	@IBOutlet weak var buttonTestDeinit: UIButton!
 	@IBOutlet weak var customTableView: CustomTableView!
 	
 	let alertController: UIAlertController = UIAlertController()
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		
+		title = "Custom Table View"
 		let container: ColorContainer = ColorContainer(firstElem: colorsArray1, secondElem: colorsArray2)
 		self.customTableView.container = container
-        self.customTableView.alertDelegate = self
+		self.customTableView.alertDelegate = self
 		
-		//inizializzazione della collection senza view di base
-		self.customCollection.managedObjectsArray = colorsArray1
-		self.customCollection.alertDelegate = self
-		self.customCollection.bounds = self.view.bounds
-    }
+		customiseBtn()
+	}
+	
+	deinit {
+		debugPrintString("Deinit called on main view controller!")
+	}
 }
-
 
 extension ViewController: TouchInCollectionCellDelegate {
 	
-	func showAlertAfterTouchInsideCell(managedColor: ManagedColor) {
+	func showAlertAfterTouchOnButton(managedColor: ManagedColor) {
 		
 		alertController.title = managedColor.name
 		alertController.message = "che bel colore"
@@ -45,5 +45,11 @@ extension ViewController: TouchInCollectionCellDelegate {
 		}
 		
 		self.present(alertController, animated: true, completion: nil)
+	}
+}
+
+extension ViewController {
+	func customiseBtn() {
+		self.buttonTestDeinit.layer.cornerRadius = 10.0
 	}
 }

@@ -20,9 +20,9 @@ class CustomCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         //shadow
-        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 2.0)
-        layer.shadowRadius = 3.0
+        layer.shadowRadius = 4.0
         layer.shadowOpacity = 1.0
         layer.masksToBounds = false
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
@@ -33,7 +33,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
         
         self.imageCellView.layer.cornerRadius = 10
         self.imageCellView.layer.borderWidth = 1
-        self.imageCellView.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        self.imageCellView.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         
 		self.buttonAlert.tintColor = .red
 //        self.hideSelection()
@@ -57,12 +57,12 @@ class CustomCollectionViewCell: UICollectionViewCell {
 	
 	@IBAction func showAlert(_ sender: Any) {
 		if let bt = sender as? UIButton {
-			delegate?.showAlertAfterTouchInsideCell(managedColor: managedColor ?? ManagedColor(name: "NULL"))
+			delegate?.showAlertAfterTouchOnButton(managedColor: managedColor ?? ManagedColor(name: "NULL"))
 		}
 	}
 	
-//	func showSelection(){ imageIfSelected.alpha = 0.5 }
-//	func hideSelection(){ imageIfSelected.alpha = 0.0 }
+	func showSelection(){ self.layer.shadowColor = UIColor.blue.cgColor }
+	func hideSelection(){ self.layer.shadowColor = UIColor.black.cgColor }
 }
 
 extension CustomCollectionViewCell {

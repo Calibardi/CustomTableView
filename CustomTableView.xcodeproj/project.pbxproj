@@ -24,6 +24,7 @@
 		E3C4729F263AF093000BBCBE /* MockDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C4729E263AF093000BBCBE /* MockDatabase.swift */; };
 		E3CC34A62638503C000DB6AC /* ManagedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC34A52638503C000DB6AC /* ManagedObjects.swift */; };
 		E3CC34AA263851BE000DB6AC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC34A9263851BE000DB6AC /* Utils.swift */; };
+		E3D4C7462655109C00B8818B /* SecondaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4C7452655109C00B8818B /* SecondaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E3C4729E263AF093000BBCBE /* MockDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabase.swift; sourceTree = "<group>"; };
 		E3CC34A52638503C000DB6AC /* ManagedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjects.swift; sourceTree = "<group>"; };
 		E3CC34A9263851BE000DB6AC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		E3D4C7452655109C00B8818B /* SecondaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryViewController.swift; sourceTree = "<group>"; };
 		E3E1E78B263C12EB00ABE669 /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		E3E1E78F263C12FE00ABE669 /* CustomTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableView.xib; sourceTree = "<group>"; };
 		E3E1E793263C167500ABE669 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,13 +80,12 @@
 		E360D32E2625D22A00B1240C /* CustomTableView */ = {
 			isa = PBXGroup;
 			children = (
+				E3D4C7442655106000B8818B /* ViewControllers */,
 				E3CC34A42638500B000DB6AC /* Model */,
 				E360D3452625DCC900B1240C /* CollectionView */,
 				E360D3442625DCBB00B1240C /* TableView */,
 				E360D32F2625D22A00B1240C /* AppDelegate.swift */,
 				E360D3312625D22A00B1240C /* SceneDelegate.swift */,
-				E360D3332625D22A00B1240C /* ViewController.swift */,
-				E360D3352625D22A00B1240C /* Main.storyboard */,
 				E3CC34A9263851BE000DB6AC /* Utils.swift */,
 				E360D3382625D22C00B1240C /* Assets.xcassets */,
 				E360D33A2625D22C00B1240C /* LaunchScreen.storyboard */,
@@ -122,6 +123,16 @@
 				E3C4729E263AF093000BBCBE /* MockDatabase.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E3D4C7442655106000B8818B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E360D3352625D22A00B1240C /* Main.storyboard */,
+				E360D3332625D22A00B1240C /* ViewController.swift */,
+				E3D4C7452655109C00B8818B /* SecondaryViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				E372B3B126513B3C004C5D7A /* CustomCollection.swift in Sources */,
 				E360D3322625D22A00B1240C /* SceneDelegate.swift in Sources */,
 				E3CC34A62638503C000DB6AC /* ManagedObjects.swift in Sources */,
+				E3D4C7462655109C00B8818B /* SecondaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
