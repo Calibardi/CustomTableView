@@ -94,16 +94,48 @@
                     <view key="view" contentMode="scaleToFill" id="yDE-Xk-wLT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RpL-1T-TBP" customClass="CustomTableView" customModule="CustomTableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="140" width="414" height="342"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHE-Qz-Xk9">
+                                <rect key="frame" x="107" y="600" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CPh-bD-Lo1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="bwK-cY-eCd"/>
+                                </constraints>
+                                <state key="normal" title="Riempi TableView">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="riempiTableView:" destination="XYe-ko-8Pi" eventType="touchUpInside" id="gBZ-Pw-td8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="37H-Ks-gXY"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="RpL-1T-TBP" firstAttribute="top" secondItem="37H-Ks-gXY" secondAttribute="top" id="CPX-8E-ugz"/>
+                            <constraint firstItem="KHE-Qz-Xk9" firstAttribute="centerY" secondItem="yDE-Xk-wLT" secondAttribute="centerY" constant="177" id="DXh-yO-DCP"/>
+                            <constraint firstItem="RpL-1T-TBP" firstAttribute="trailing" secondItem="37H-Ks-gXY" secondAttribute="trailing" id="HGB-Ch-CtK"/>
+                            <constraint firstItem="KHE-Qz-Xk9" firstAttribute="top" secondItem="RpL-1T-TBP" secondAttribute="bottom" constant="118" id="JGs-sy-wsu"/>
+                            <constraint firstItem="RpL-1T-TBP" firstAttribute="leading" secondItem="37H-Ks-gXY" secondAttribute="leading" id="p5i-46-h2M"/>
+                            <constraint firstItem="KHE-Qz-Xk9" firstAttribute="centerX" secondItem="yDE-Xk-wLT" secondAttribute="centerX" id="xQJ-OI-mMl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gtn-UA-RmS">
                         <barButtonItem key="backBarButtonItem" title=" " id="TXg-ly-o46"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="buttonRiempimento" destination="KHE-Qz-Xk9" id="Mci-H5-Wdn"/>
+                        <outlet property="customTableView" destination="RpL-1T-TBP" id="iqz-Fm-fno"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7g8-5F-Jul" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1620" y="314"/>
+            <point key="canvasLocation" x="1617" y="323"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PQr-oo-BmK">

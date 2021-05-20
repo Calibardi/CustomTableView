@@ -35,9 +35,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
         self.imageCellView.layer.borderWidth = 1
         self.imageCellView.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         
-		self.buttonAlert.tintColor = .red
-//        self.hideSelection()
-        
+		self.buttonAlert.tintColor = .red        
     }
 
 	override func prepareForReuse() {
@@ -45,7 +43,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
 		
 		self.imageCellView.image = nil
 		self.labelMainTitleCell.text = ""
-//		self.hideSelection()
 	}
     
 	func fillCell(with object: ManagedColor) {

@@ -9,14 +9,25 @@ import UIKit
 
 class SecondaryViewController: UIViewController {
 
-    override func viewDidLoad() {
+	@IBOutlet weak var customTableView: CustomTableView!
+	@IBOutlet weak var buttonRiempimento: UIButton!
+	
+	var container: ColorContainer?
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
 		title = "Deinit Test"
         // Do any additional setup after loading the view.
+		
+//		self.container = ColorContainer(firstElem: colorsArray2, secondElem: colorsArray1)
+//		self.customTableView.container = container
+		
+		customiseButtontRiempimento()
     }
     
 	deinit {
 		debugPrintString("Deinit called per la view secondaria")
+		self.container = nil
 	}
     /*
     // MARK: - Navigation
@@ -28,4 +39,17 @@ class SecondaryViewController: UIViewController {
     }
     */
 
+	
+	@IBAction func riempiTableView(_ sender: Any) {
+		
+		self.container = ColorContainer(firstElem: colorsArray2, secondElem: colorsArray1)
+		customTableView.pupulate(with: container!)
+		customTableView.reloadData()
+	}
+}
+
+extension SecondaryViewController {
+	func customiseButtontRiempimento() {
+		self.buttonRiempimento.layer.cornerRadius = 10.0
+	}
 }

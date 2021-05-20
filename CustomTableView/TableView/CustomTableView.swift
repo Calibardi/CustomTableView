@@ -47,10 +47,16 @@ class CustomTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         let tableViewCellNib = UINib(nibName: CustomTableViewCell.identifier, bundle: nil)
         self.register(tableViewCellNib, forCellReuseIdentifier: CustomTableViewCell.identifier)
     }
+	
+	func pupulate(with container: ColorContainer) {
+		self.container = container
+	}
     
 //    MARK: - Tableview datasource/delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+		if container == nil {
+			return 0
+		} else { return 2 }
     }
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
@@ -70,6 +76,7 @@ class CustomTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         
 			cell.populateWith(object: container?.firstContent ?? [ManagedColor]())
 			cell.customCollection.alertDelegate = alertDelegate
+			
 		case rows.secondContent.rawValue:
         
 			cell.populateWith(object: container?.secondContent ?? [ManagedColor]())

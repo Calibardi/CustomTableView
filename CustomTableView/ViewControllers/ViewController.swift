@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 		
 		title = "Custom Table View"
 		let container: ColorContainer = ColorContainer(firstElem: colorsArray1, secondElem: colorsArray2)
-		self.customTableView.container = container
+		self.customTableView.pupulate(with: container)
 		self.customTableView.alertDelegate = self
 		
 		customiseDeinitBtn()
