@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 let collectionID = "CustomCollectionView"
 
@@ -32,7 +33,7 @@ func debugPrintString(_ string: String) {
 	NSLog("[DEBUG] ~> " + string)
 }
 // MARK: - Protocollo/delegate
-protocol TouchInCollectionCellDelegate {
+protocol TouchInCollectionCellDelegate: AnyObject {
 	func showAlertAfterTouchOnButton(managedColor: ManagedColor)
 	func progressViewBecameSaturated()
 	func userDidTapInCellToIncreaseProgress()

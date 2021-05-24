@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -51,26 +52,67 @@
                                     <action selector="resetProgressView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JiF-dZ-qcU"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K1l-NK-T5O" customClass="CustomTableView" customModule="CustomTableView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="140" width="414" height="342"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uZi-xR-jjn">
+                                <rect key="frame" x="0.0" y="143" width="414" height="286"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="110" id="OUm-GA-rrD" customClass="CustomTableViewCell" customModule="CustomTableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OUm-GA-rrD" id="8IU-H4-XfC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q7a-A2-ak9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sSb-B1-JHc">
+                                                        <size key="itemSize" width="100" height="100"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7Eg-l7-ghk">
+                                                            <rect key="frame" x="10" y="5" width="100" height="100"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0Gy-vi-M9k">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </collectionViewCellContentView>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Q7a-A2-ak9" firstAttribute="top" secondItem="8IU-H4-XfC" secondAttribute="top" id="3Bs-0k-bld"/>
+                                                <constraint firstItem="Q7a-A2-ak9" firstAttribute="leading" secondItem="8IU-H4-XfC" secondAttribute="leading" id="C1A-PY-lbq"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q7a-A2-ak9" secondAttribute="trailing" id="KIF-57-YMe"/>
+                                                <constraint firstAttribute="bottom" secondItem="Q7a-A2-ak9" secondAttribute="bottom" id="tJh-Ou-eZY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="customCollectionView" destination="Q7a-A2-ak9" id="0Xh-Qa-Uua"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="K1l-NK-T5O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="10L-iE-uRV"/>
                             <constraint firstItem="n9T-H5-xh4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Zd-se-pRc"/>
                             <constraint firstItem="Tnd-am-oj2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Cv-wP-AXW"/>
                             <constraint firstItem="SQ0-zq-HTm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4Yv-nG-qOE"/>
                             <constraint firstItem="n9T-H5-xh4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="179" id="7SU-Zm-qFn"/>
-                            <constraint firstItem="K1l-NK-T5O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FdG-Rw-jcg"/>
+                            <constraint firstItem="uZi-xR-jjn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ekb-3w-s6C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SQ0-zq-HTm" secondAttribute="trailing" constant="20" id="Fn2-6l-Snx"/>
-                            <constraint firstItem="K1l-NK-T5O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jgb-N3-FGU"/>
                             <constraint firstItem="n9T-H5-xh4" firstAttribute="top" secondItem="SQ0-zq-HTm" secondAttribute="bottom" constant="35" id="UQI-KG-BeH"/>
                             <constraint firstItem="Tnd-am-oj2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="323" id="dhy-zh-fxt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K1l-NK-T5O" secondAttribute="bottom" constant="380" id="lQg-hp-KVL"/>
+                            <constraint firstItem="SQ0-zq-HTm" firstAttribute="top" secondItem="uZi-xR-jjn" secondAttribute="bottom" constant="134" id="eQF-Do-aH4"/>
+                            <constraint firstItem="uZi-xR-jjn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="143" id="iOo-8C-HrE"/>
+                            <constraint firstItem="uZi-xR-jjn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jAI-62-dhW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kgd-gL-xtJ">
@@ -79,7 +121,7 @@
                     <connections>
                         <outlet property="buttonProgressReset" destination="n9T-H5-xh4" id="sy1-gB-qHd"/>
                         <outlet property="buttonTestDeinit" destination="Tnd-am-oj2" id="i2w-6g-G17"/>
-                        <outlet property="customTableView" destination="K1l-NK-T5O" id="Yiq-bQ-Y1K"/>
+                        <outlet property="customTableView" destination="uZi-xR-jjn" id="vHe-Hd-Djb"/>
                         <outlet property="progressViewRandom" destination="SQ0-zq-HTm" id="Dt1-bL-oS9"/>
                     </connections>
                 </viewController>

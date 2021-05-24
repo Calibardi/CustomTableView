@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 	@IBOutlet weak var progressViewRandom: UIProgressView!
 	@IBOutlet weak var buttonProgressReset: UIButton!
 	@IBOutlet weak var buttonTestDeinit: UIButton!
-	@IBOutlet weak var customTableView: CustomTableView!
+	@IBOutlet weak var customTableView: UITableView!
 	
 	let alertControllerForButton: UIAlertController = UIAlertController()
 	let alertControllerForProgressView: UIAlertController = UIAlertController()
@@ -24,13 +24,13 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		title = "Custom Table View"
-		let container: ColorContainer = ColorContainer(firstElem: colorsArray1, secondElem: colorsArray2)
-		self.customTableView.pupulate(with: container)
-		self.customTableView.alertDelegate = self
 		
 		customiseDeinitBtn()
 		customiseResetProgressButton()
 		customiseProgressView()
+		
+		self.customTableView.delegate = self
+		self.customTableView.dataSource = self
 	}
 	
 	deinit {
@@ -43,8 +43,57 @@ class ViewController: UIViewController {
 		self.progressViewRandom.setProgress(Float(self.progress.fractionCompleted), animated: true)
 	}
 	
+	
+	
 }
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return 2
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell else {
+			return UITableViewCell()
+		}
+		
+		switch indexPath.row {
+		case 0:
+			cell.managedObjectsArray = colorsArray1
+			cell.delegate = self
+		case 1:
+			cell.managedObjectsArray = colorsArray2
+			cell.delegate = self
+		default:
+			return cell
+		}
+		
+		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 120
+	}
+}
+
+//MARK: - Customizzazione progress e buttons
+extension ViewController {
+	func customiseDeinitBtn() {
+		self.buttonTestDeinit.layer.cornerRadius = 10.0
+	}
+	
+	func customiseProgressView() {
+		progressViewRandom.transform = progressViewRandom.transform.scaledBy(x: 1, y: 3)
+		progressViewRandom.layer.cornerRadius = 10
+	}
+	
+	func customiseResetProgressButton() {
+		self.buttonProgressReset.layer.cornerRadius = 10.0
+	}
+}
+
+//MARK: - Delegate ad-hoc
 extension ViewController: TouchInCollectionCellDelegate {
 	
 	func showAlertAfterTouchOnButton(managedColor: ManagedColor) {
@@ -84,20 +133,5 @@ extension ViewController: TouchInCollectionCellDelegate {
 		}
 		
 		self.present(alertControllerForProgressView, animated: true, completion: nil)
-	}
-}
-
-extension ViewController {
-	func customiseDeinitBtn() {
-		self.buttonTestDeinit.layer.cornerRadius = 10.0
-	}
-	
-	func customiseProgressView() {
-		progressViewRandom.transform = progressViewRandom.transform.scaledBy(x: 1, y: 3)
-		progressViewRandom.layer.cornerRadius = 10
-	}
-	
-	func customiseResetProgressButton() {
-		self.buttonProgressReset.layer.cornerRadius = 10.0
 	}
 }

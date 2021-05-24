@@ -6,17 +6,28 @@
 //
 import UIKit
 
+class ManagedColor {
+	
+	var name: String
+	var color: UIColor
+	
+	init(name: String, color: UIColor = .lightGray) {
+		self.name = name
+		self.color = color
+	}
+}
+
 class CustomCollectionViewCell: UICollectionViewCell {
 	    
 	var managedColor: ManagedColor?
 	
-    @IBOutlet weak private var imageCellView: UIImageView!
-    @IBOutlet weak private var labelMainTitleCell: UILabel!
-	@IBOutlet weak private var buttonAlert: UIButton!
+    @IBOutlet weak private var imageCellView: UIImageView?
+    @IBOutlet weak private var labelMainTitleCell: UILabel?
+	@IBOutlet weak private var buttonAlert: UIButton?
 	
-	var delegate: TouchInCollectionCellDelegate?
+	weak var delegate: TouchInCollectionCellDelegate?
     
-    override func awakeFromNib() {
+    override internal func awakeFromNib() {
         super.awakeFromNib()
         
         //shadow
@@ -31,28 +42,28 @@ class CustomCollectionViewCell: UICollectionViewCell {
         contentView.layer.masksToBounds = true
         layer.cornerRadius = 10
         
-        self.imageCellView.layer.cornerRadius = 10
-        self.imageCellView.layer.borderWidth = 1
-        self.imageCellView.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+		self.imageCellView?.layer.cornerRadius = 10
+		self.imageCellView?.layer.borderWidth = 1
+		self.imageCellView?.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         
-		self.buttonAlert.tintColor = .red        
+		self.buttonAlert?.tintColor = .red
     }
 
-	override func prepareForReuse() {
+	override internal func prepareForReuse() {
 		super.prepareForReuse()
 		
-		self.imageCellView.image = nil
-		self.labelMainTitleCell.text = ""
+		self.imageCellView?.image = nil
+		self.labelMainTitleCell?.text = ""
 	}
     
 	func fillCell(with object: ManagedColor) {
 		
-		self.imageCellView.fill(with: object.color)
-		self.labelMainTitleCell.text = object.name
+		self.imageCellView?.fill(with: object.color)
+		self.labelMainTitleCell?.text = object.name
 		self.managedColor = object
 	}
 	
-	@IBAction func showAlert(_ sender: Any) {
+	@IBAction private func showAlert(_ sender: Any) {
 		if let bt = sender as? UIButton {
 			delegate?.showAlertAfterTouchOnButton(managedColor: managedColor ?? ManagedColor(name: "NULL"))
 		}

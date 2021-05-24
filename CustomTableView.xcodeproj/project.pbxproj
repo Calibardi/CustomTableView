@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E33BBBA72653C77C000CA24C /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1E78B263C12EB00ABE669 /* CustomTableView.swift */; };
-		E33BBBA82653C77F000CA24C /* CustomTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E1E78F263C12FE00ABE669 /* CustomTableView.xib */; };
-		E33BBBA92653C781000CA24C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1E793263C167500ABE669 /* CustomTableViewCell.swift */; };
-		E33BBBAA2653C783000CA24C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E1E794263C167500ABE669 /* CustomTableViewCell.xib */; };
 		E360D3302625D22A00B1240C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360D32F2625D22A00B1240C /* AppDelegate.swift */; };
 		E360D3322625D22A00B1240C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360D3312625D22A00B1240C /* SceneDelegate.swift */; };
 		E360D3342625D22A00B1240C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360D3332625D22A00B1240C /* ViewController.swift */; };
@@ -19,12 +15,9 @@
 		E360D33C2625D22C00B1240C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E360D33A2625D22C00B1240C /* LaunchScreen.storyboard */; };
 		E36CF4E82630CE6D009EF7BC /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CF4E62630CE6D009EF7BC /* CustomCollectionViewCell.swift */; };
 		E36CF4E92630CE6D009EF7BC /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36CF4E72630CE6D009EF7BC /* CustomCollectionViewCell.xib */; };
-		E372B3B126513B3C004C5D7A /* CustomCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E372B3B026513B3C004C5D7A /* CustomCollection.swift */; };
-		E372B3BD265177E4004C5D7A /* CustomCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = E372B3BC265177E4004C5D7A /* CustomCollection.xib */; };
 		E3C4729F263AF093000BBCBE /* MockDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C4729E263AF093000BBCBE /* MockDatabase.swift */; };
-		E3CC34A62638503C000DB6AC /* ManagedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC34A52638503C000DB6AC /* ManagedObjects.swift */; };
 		E3CC34AA263851BE000DB6AC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC34A9263851BE000DB6AC /* Utils.swift */; };
-		E3D4C7462655109C00B8818B /* SecondaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4C7452655109C00B8818B /* SecondaryViewController.swift */; };
+		E3DB6C62265BB46F001AF3D7 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DB6C61265BB46F001AF3D7 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,16 +31,10 @@
 		E360D33D2625D22C00B1240C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E36CF4E62630CE6D009EF7BC /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		E36CF4E72630CE6D009EF7BC /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
-		E372B3B026513B3C004C5D7A /* CustomCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollection.swift; sourceTree = "<group>"; };
-		E372B3BC265177E4004C5D7A /* CustomCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollection.xib; sourceTree = "<group>"; };
 		E3C4729E263AF093000BBCBE /* MockDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabase.swift; sourceTree = "<group>"; };
-		E3CC34A52638503C000DB6AC /* ManagedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjects.swift; sourceTree = "<group>"; };
 		E3CC34A9263851BE000DB6AC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E3D4C7452655109C00B8818B /* SecondaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryViewController.swift; sourceTree = "<group>"; };
-		E3E1E78B263C12EB00ABE669 /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
-		E3E1E78F263C12FE00ABE669 /* CustomTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableView.xib; sourceTree = "<group>"; };
-		E3E1E793263C167500ABE669 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		E3E1E794263C167500ABE669 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		E3DB6C61265BB46F001AF3D7 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +67,8 @@
 		E360D32E2625D22A00B1240C /* CustomTableView */ = {
 			isa = PBXGroup;
 			children = (
-				E3D4C7442655106000B8818B /* ViewControllers */,
 				E3CC34A42638500B000DB6AC /* Model */,
+				E3D4C7442655106000B8818B /* ViewControllers */,
 				E360D3452625DCC900B1240C /* CollectionView */,
 				E360D3442625DCBB00B1240C /* TableView */,
 				E360D32F2625D22A00B1240C /* AppDelegate.swift */,
@@ -97,10 +84,7 @@
 		E360D3442625DCBB00B1240C /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				E3E1E78B263C12EB00ABE669 /* CustomTableView.swift */,
-				E3E1E78F263C12FE00ABE669 /* CustomTableView.xib */,
-				E3E1E793263C167500ABE669 /* CustomTableViewCell.swift */,
-				E3E1E794263C167500ABE669 /* CustomTableViewCell.xib */,
+				E3DB6C61265BB46F001AF3D7 /* CustomTableViewCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -108,8 +92,6 @@
 		E360D3452625DCC900B1240C /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				E372B3B026513B3C004C5D7A /* CustomCollection.swift */,
-				E372B3BC265177E4004C5D7A /* CustomCollection.xib */,
 				E36CF4E62630CE6D009EF7BC /* CustomCollectionViewCell.swift */,
 				E36CF4E72630CE6D009EF7BC /* CustomCollectionViewCell.xib */,
 			);
@@ -119,7 +101,6 @@
 		E3CC34A42638500B000DB6AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E3CC34A52638503C000DB6AC /* ManagedObjects.swift */,
 				E3C4729E263AF093000BBCBE /* MockDatabase.swift */,
 			);
 			path = Model;
@@ -192,11 +173,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E33BBBA82653C77F000CA24C /* CustomTableView.xib in Resources */,
-				E33BBBAA2653C783000CA24C /* CustomTableViewCell.xib in Resources */,
 				E360D33C2625D22C00B1240C /* LaunchScreen.storyboard in Resources */,
 				E360D3392625D22C00B1240C /* Assets.xcassets in Resources */,
-				E372B3BD265177E4004C5D7A /* CustomCollection.xib in Resources */,
 				E360D3372625D22A00B1240C /* Main.storyboard in Resources */,
 				E36CF4E92630CE6D009EF7BC /* CustomCollectionViewCell.xib in Resources */,
 			);
@@ -209,18 +187,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E33BBBA72653C77C000CA24C /* CustomTableView.swift in Sources */,
 				E360D3342625D22A00B1240C /* ViewController.swift in Sources */,
-				E33BBBA92653C781000CA24C /* CustomTableViewCell.swift in Sources */,
 				E36CF4E82630CE6D009EF7BC /* CustomCollectionViewCell.swift in Sources */,
 				E360D3302625D22A00B1240C /* AppDelegate.swift in Sources */,
 				E3CC34AA263851BE000DB6AC /* Utils.swift in Sources */,
 				E3C4729F263AF093000BBCBE /* MockDatabase.swift in Sources */,
+				E3DB6C62265BB46F001AF3D7 /* CustomTableViewCell.swift in Sources */,
 				E360D3302625D22A00B1240C /* AppDelegate.swift in Sources */,
-				E372B3B126513B3C004C5D7A /* CustomCollection.swift in Sources */,
 				E360D3322625D22A00B1240C /* SceneDelegate.swift in Sources */,
-				E3CC34A62638503C000DB6AC /* ManagedObjects.swift in Sources */,
-				E3D4C7462655109C00B8818B /* SecondaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
