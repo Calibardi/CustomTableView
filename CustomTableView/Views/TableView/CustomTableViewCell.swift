@@ -9,10 +9,10 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-	var managedObjectsArray: [ManagedColor] = [ManagedColor]()
-	weak var delegate: TouchInCollectionCellDelegate?
+	private var managedObjectsArray: [ManagedColor] = [ManagedColor]()
+    weak var delegate: TouchInCollectionCellDelegate?
 	
-	@IBOutlet weak var customCollectionView: UICollectionView!
+	@IBOutlet private weak var customCollectionView: UICollectionView!
 	
 	
 	override func awakeFromNib() {
@@ -35,6 +35,10 @@ class CustomTableViewCell: UITableViewCell {
 		let collectionViewCellNib = UINib(nibName: CustomCollectionViewCell.identifier, bundle: nil)
 		self.customCollectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
 	}
+    
+    func populateCell(objectsArray: [ManagedColor]) {
+        self.managedObjectsArray = objectsArray
+    }
 
 }
 
@@ -50,6 +54,7 @@ extension CustomTableViewCell: UICollectionViewDelegate, UICollectionViewDataSou
 		}
 		
 		cell.fillCell(with: managedObjectsArray[indexPath.item])
+        cell.delegate = self.delegate
 		
 		return cell
 	}

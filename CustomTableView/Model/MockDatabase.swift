@@ -45,3 +45,5 @@ let colorsArray2: [ManagedColor] = [
 	ManagedColor(name: "Acqua marina", color: acquamarina),
 	ManagedColor(name: "Verde chiaro", color: verdeC)
 ]
+
+let mergedColors = colorsArray1 + colorsArray2 + colorsArray1 + colorsArray2

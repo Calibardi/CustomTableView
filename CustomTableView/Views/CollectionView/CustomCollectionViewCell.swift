@@ -19,7 +19,7 @@ class ManagedColor {
 
 class CustomCollectionViewCell: UICollectionViewCell {
 	    
-	var managedColor: ManagedColor?
+	private var managedColor: ManagedColor?
 	
     @IBOutlet weak private var imageCellView: UIImageView?
     @IBOutlet weak private var labelMainTitleCell: UILabel?
