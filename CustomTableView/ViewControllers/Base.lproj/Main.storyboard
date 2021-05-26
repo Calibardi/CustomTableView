@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eE0-Us-pUR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eE0-Us-pUR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -42,7 +42,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="110" id="OUm-GA-rrD" customClass="CustomTableViewCell" customModule="CustomTableView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="110"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OUm-GA-rrD" id="8IU-H4-XfC">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
@@ -123,6 +123,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="8sR-o2-jws"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonGoToCollectionView" destination="JH9-3p-fPG" id="dO8-6n-dup"/>
                         <outlet property="buttonProgressReset" destination="n9T-H5-xh4" id="sy1-gB-qHd"/>
                         <outlet property="customTableView" destination="uZi-xR-jjn" id="vHe-Hd-Djb"/>
                         <outlet property="progressViewRandom" destination="SQ0-zq-HTm" id="Dt1-bL-oS9"/>
@@ -190,7 +191,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvB-vX-XgV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171.01449275362319" y="322.76785714285711"/>
+            <point key="canvasLocation" x="633" y="323"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gAp-qX-1v4">

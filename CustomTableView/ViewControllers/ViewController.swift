@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 	
 	@IBOutlet private var progressViewRandom: UIProgressView?
 	@IBOutlet private var buttonProgressReset: UIButton?
-	@IBOutlet private var buttonTestDeinit: UIButton?
 	@IBOutlet private var customTableView: UITableView?
+	@IBOutlet weak var buttonGoToCollectionView: UIButton!
 	
     private var alertControllerForButton: UIAlertController? = UIAlertController()
 	private var alertControllerForProgressView: UIAlertController? = UIAlertController()
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 		
 		title = "Main View Controller"
 		
-		customiseDeinitBtn()
+		customiseGoToBtn()
 		customiseResetProgressButton()
 		customiseProgressView()
 		
@@ -82,8 +82,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 //MARK: - Customizzazione progress e buttons
 extension ViewController {
-	private func customiseDeinitBtn() {
-        self.buttonTestDeinit?.layer.cornerRadius = 10.0
+	private func customiseGoToBtn() {
+        self.buttonGoToCollectionView?.layer.cornerRadius = 10.0
 	}
 	
 	private func customiseProgressView() {

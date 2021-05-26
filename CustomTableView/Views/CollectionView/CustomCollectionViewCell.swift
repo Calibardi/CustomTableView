@@ -71,6 +71,10 @@ class CustomCollectionViewCell: UICollectionViewCell {
 	
 	func showSelection(){ self.layer.shadowColor = UIColor.blue.cgColor }
 	func hideSelection(){ self.layer.shadowColor = UIColor.black.cgColor }
+	
+//	deinit {
+//		debugPrintString("deInit sulla collectionViewCell!")
+//	}
 }
 
 extension CustomCollectionViewCell {

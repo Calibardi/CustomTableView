@@ -39,6 +39,10 @@ class CustomTableViewCell: UITableViewCell {
     func populateCell(objectsArray: [ManagedColor]) {
         self.managedObjectsArray = objectsArray
     }
+	
+//	deinit {
+//		debugPrintString("deInit sulla CustomTableViewCell")
+//	}
 
 }
 
